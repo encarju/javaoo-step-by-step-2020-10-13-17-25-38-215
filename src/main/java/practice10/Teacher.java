@@ -40,15 +40,12 @@ public class Teacher extends Person {
     }
 
     public boolean isTeaching(Student student) {
-        for (Klass klass : classes){
-            if(klass == student.getKlass()){
-                return true;
-            }
-        }
-        return false;
+
+        return classes.contains(student.getKlass());
     }
 
     public String introduceWith(Student student) {
+
         for(Klass klass : classes){
             if(klass == student.getKlass()){
                 return String.format("%s I am a Teacher. I teach %s.",super.introduce(),student.getName());
