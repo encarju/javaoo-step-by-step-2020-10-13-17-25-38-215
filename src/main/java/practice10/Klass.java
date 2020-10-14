@@ -6,7 +6,7 @@ import java.util.List;
 public class Klass {
     private int number;
     private Student leader;
-    private List<Student> member = new ArrayList<>();
+    private List<Student> members = new ArrayList<>();
 
     public Klass(int number) {
         this.number = number;
@@ -26,7 +26,7 @@ public class Klass {
     }
 
     public void assignLeader(Student leader) {
-        if(member.contains(leader)) {
+        if(members.contains(leader)) {
             this.leader = leader;
         }
         else{
@@ -36,6 +36,6 @@ public class Klass {
 
 
     public void appendMember(Student member) {
-        this.member.add(member);
+        this.members.add(member);
     }
 }
