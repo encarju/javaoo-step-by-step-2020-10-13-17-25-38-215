@@ -11,4 +11,9 @@ public class Teacher extends Person {
     public Klass getKlass() {
         return klass;
     }
+
+    @Override
+    public String introduce() {
+        return String.format("%s I am a Teacher. I teach Class %d.",super.introduce(),klass.getNumber());
+    }
 }
