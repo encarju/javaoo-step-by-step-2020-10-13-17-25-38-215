@@ -1,5 +1,7 @@
 package practice08;
 
+import java.util.Objects;
+
 public class Student extends Person{
     private Klass klass;
 
@@ -14,7 +16,11 @@ public class Student extends Person{
 
     @Override
     public String introduce() {
-        return String.format("%s I am a Student. I am at Class %d.",super.introduce(),klass.getNumber());
+        return equals(this.klass.getLeader()) ?
+                String.format("%s I am a Student. I am Leader of Class %d.",super.introduce(),klass.getNumber()) :
+                String.format("%s I am a Student. I am at Class %d.",super.introduce(),klass.getNumber());
     }
+
+
 }
 
