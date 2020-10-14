@@ -20,4 +20,15 @@ public class Klass {
     public Student getLeader() {
         return this.leader;
     }
+
+    public void assignLeader(Student leader) {
+        if(leader.getKlass().number == this.number) {
+            this.leader = leader;
+        }
+        else{
+            System.out.print("It is not one of us.\n");
+        }
+    }
+
+
 }

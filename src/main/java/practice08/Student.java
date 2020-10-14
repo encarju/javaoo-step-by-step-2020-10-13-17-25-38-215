@@ -21,6 +21,14 @@ public class Student extends Person{
                 String.format("%s I am a Student. I am at Class %d.",super.introduce(),klass.getNumber());
     }
 
-
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Student student = (Student) o;
+        return Objects.equals(klass, student.klass);
+    }
+    
 }
 
