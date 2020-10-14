@@ -8,6 +8,9 @@ public class Teacher extends Person {
         this.klass = klass;
     }
 
+    public Teacher(int id, String name, int age) {
+        super(id, name, age);
+    }
 
     public Klass getKlass() {
         return klass;
@@ -15,6 +18,8 @@ public class Teacher extends Person {
 
     @Override
     public String introduce() {
-        return String.format("%s I am a Teacher. I teach Class %d.", super.introduce(), klass.getNumber());
+        return klass==null ?
+                String.format("%s I am a Teacher. I teach No Class.", super.introduce()) :
+                String.format("%s I am a Teacher. I teach Class %d.", super.introduce(), klass.getNumber());
     }
 }
