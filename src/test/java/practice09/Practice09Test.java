@@ -1,54 +1,54 @@
-//package practice09;
-//
-//import org.junit.Before;
-//import org.junit.Test;
-//
-//import java.io.ByteArrayOutputStream;
-//import java.io.PrintStream;
-//
-//import static org.fest.assertions.api.Assertions.assertThat;
-//
-//public class Practice09Test {
-//    private Klass klass;
-//    private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-//
-//    @Before
-//    public void setup() {
-//        klass = new Klass(2);
-//        System.setOut(new PrintStream(outContent));
-//    }
-//
-//    @Test
-//    public void should_person_have_id_name_and_age() throws Exception {
-//        Person person = new Person(1, "Tom", 21);
-//        assertThat(person.getName()).isEqualTo("Tom");
-//        assertThat(person.getAge()).isEqualTo(21);
-//    }
-//
-//    @Test
-//    public void should_person_with_same_id_be_same_one() throws Exception {
-//        Person person1 = new Person(1, "Tom", 21);
-//        Person person2 = new Person(1, "Tom", 21);
-//        assertThat(person1).isEqualTo(person2);
-//    }
-//
-//    @Test
-//    public void should_person_have_an_introduce_method_which_introduce_person_with_name_and_age() throws Exception {
-//        Person tom = new Person(1, "Tom", 21);
-//        String introduce = tom.introduce();
-//        assertThat(introduce).isEqualTo("My name is Tom. I am 21 years old.");
-//    }
-//
-//    @Test
-//    public void should_class_have_a_number() throws Exception {
-//        assertThat(klass.getNumber()).isEqualTo(2);
-//    }
-//
-//    @Test
-//    public void should_class_get_display_name() throws Exception {
-//        assertThat(klass.getDisplayName()).isEqualTo("Class 2");
-//    }
-//
+package practice09;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+
+import static org.fest.assertions.api.Assertions.assertThat;
+
+public class Practice09Test {
+    private Klass klass;
+    private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+
+    @Before
+    public void setup() {
+        klass = new Klass(2);
+        System.setOut(new PrintStream(outContent));
+    }
+
+    @Test
+    public void should_person_have_id_name_and_age() throws Exception {
+        Person person = new Person(1, "Tom", 21);
+        assertThat(person.getName()).isEqualTo("Tom");
+        assertThat(person.getAge()).isEqualTo(21);
+    }
+
+    @Test
+    public void should_person_with_same_id_be_same_one() throws Exception {
+        Person person1 = new Person(1, "Tom", 21);
+        Person person2 = new Person(1, "Tom", 21);
+        assertThat(person1).isEqualTo(person2);
+    }
+
+    @Test
+    public void should_person_have_an_introduce_method_which_introduce_person_with_name_and_age() throws Exception {
+        Person tom = new Person(1, "Tom", 21);
+        String introduce = tom.introduce();
+        assertThat(introduce).isEqualTo("My name is Tom. I am 21 years old.");
+    }
+
+    @Test
+    public void should_class_have_a_number() throws Exception {
+        assertThat(klass.getNumber()).isEqualTo(2);
+    }
+
+    @Test
+    public void should_class_get_display_name() throws Exception {
+        assertThat(klass.getDisplayName()).isEqualTo("Class 2");
+    }
+
 //    @Test
 //    public void should_class_not_assign_a_student_as_leader_when_student_is_not_a_member() throws Exception {
 //        Student jerry = new Student(1, "Jerry", 8, new Klass(5));
@@ -126,4 +126,4 @@
 //        Student jerry = new Student(1, "Jerry", 8, new Klass(2));
 //        assertThat(tom.introduceWith(jerry)).isEqualTo("My name is Tom. I am 21 years old. I am a Teacher. I don't teach Jerry.");
 //    }
-//}
+}
