@@ -3,6 +3,7 @@ package practice09;
 public class Klass {
     private int number;
     private Student leader;
+    private Student member;
 
     public Klass(int number) {
         this.number = number;
@@ -31,4 +32,7 @@ public class Klass {
     }
 
 
+    public void appendMember(Student member) {
+        this.member = member;
+    }
 }
