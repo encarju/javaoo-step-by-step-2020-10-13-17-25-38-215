@@ -38,4 +38,13 @@ public class Teacher extends Person {
         }
         return String.format("%s I am a Teacher. I teach Class %d.", super.introduce(), classes.getFirst().getNumber());
     }
+
+    public boolean isTeaching(Student student) {
+        for (Klass klass : classes){
+            if(klass == student.getKlass()){
+                return true;
+            }
+        }
+        return false;
+    }
 }
