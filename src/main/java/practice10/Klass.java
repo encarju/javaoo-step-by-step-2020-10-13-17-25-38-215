@@ -1,9 +1,12 @@
 package practice10;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Klass {
     private int number;
     private Student leader;
-    private Student member;
+    private List<Student> member = new ArrayList<>();
 
     public Klass(int number) {
         this.number = number;
@@ -23,7 +26,7 @@ public class Klass {
     }
 
     public void assignLeader(Student leader) {
-        if(leader.getKlass().number == this.number) {
+        if(member.contains(leader)) {
             this.leader = leader;
         }
         else{
@@ -33,6 +36,6 @@ public class Klass {
 
 
     public void appendMember(Student member) {
-        this.member = member;
+        this.member.add(member);
     }
 }
