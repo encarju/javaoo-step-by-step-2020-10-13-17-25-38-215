@@ -22,4 +22,8 @@ public class Teacher extends Person {
                 String.format("%s I am a Teacher. I teach No Class.", super.introduce()) :
                 String.format("%s I am a Teacher. I teach Class %d.", super.introduce(), klass.getNumber());
     }
+
+    public String introduceWith(Student student) {
+        return String.format("%s I am a Teacher. I teach %s.",super.introduce(),student.getName());
+    }
 }
